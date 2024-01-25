@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style contenteditable="true">
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-size: cover;
+            background-image: linear-gradient( rgba(117, 95, 23, 1),rgba(177, 236, 16, 0.9)), url(https://cdn11.bigcommerce.com/s-3cvkdwuukl/images/stencil/728x728/products/26037/32499/NTT8553__24815.1622753239.jpg?c=2);
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            height: 100vh;
+            text-align: center;
+          
+        }
+
+  button{
+    border: none;
+    padding: 10px 0;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    border-radius: 30px;
+    margin-bottom: 5px;
+ 
+  }
+[id="increment-btn"]{
+   background: #0B3634;
+   position: relative;
+}
+[id="increment-btn"]::after{
+   content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    bottom: 0;
+    border-radius: 30px;
+    
+
+    transition: all 1s ease;
+    background:  #34847d;
+ color: rgb(177, 166, 166);
+ 
+}
+
+[id="increment-btn"]:hover::after{
+    content: 'Click';
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+[ id="save-btn"]{
+    background:#005B5C;
+    transition: all 0.1s ease;
+}
+[ id="save-btn"]:active{
+    background-color: #5fdfe6;
+    color: white;
+    box-shadow: 0 0 10px rgba(114, 110, 110, 0.87);
+}
+.container{
+    max-width:80%;
+    padding: 10px;
+    border-radius: 13px;
+    
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background:#28161C;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgb(137, 136, 136);
+
+}
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+        
+<h1>Passenger Counter:</h1>
+<h2 id="count-el">0</h2>
+<button id="increment-btn" onclick="increment()">INCREMENT</button>
+<button id="save-btn" onclick="save()">SAVE</button>
+<p id="save-el" style="width:250px;">Previous enetered:</p>
+
+</div>
+
+    <script src="Counter.js"></script>
+</body>
+</html> 
